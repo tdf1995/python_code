@@ -34,7 +34,7 @@ def get_bounding_point(dom):
 
 def gen_cls_img():
 
-    folder_path = r'E:\菜品\分割\训练标注数据\第三批'
+    folder_path = r'E:\ocr\dataset\dataset\xml'
 
     img_files = os.listdir(os.path.join(folder_path))
     for file in img_files:

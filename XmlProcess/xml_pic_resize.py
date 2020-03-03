@@ -5,17 +5,18 @@ import glob
 import xml.etree.ElementTree as ET
 import numpy as np
 
-xml_path = r'E:\多目标跟踪\keras-yolo3-master\keras-yolo3-master\VOCdevkit\VOC2007\新建文件夹'
-pic_path = r'E:\多目标跟踪\keras-yolo3-master\keras-yolo3-master\VOCdevkit\VOC2007\新建文件夹'
-target_height = 384
-target_width = 384
+xml_path = r'E:\ocr\检测\原图mask分割后的单个字符检测\VOC2007\Annotations'
+pic_path = r'E:\ocr\检测\原图mask分割后的单个字符检测\VOC2007\JPEGImages'
+target_height = 128
+target_width = 1200
 
 def xml_pic_Resize(xml_path, pic_path):
     xml_files = glob.glob(xml_path+'/*.xml')
     pic_files = glob.glob(pic_path+'/*.jpg')
     for pic_file in pic_files:
         img = cv2.imdecode(np.fromfile(pic_file, dtype=np.uint8), cv2.IMREAD_UNCHANGED)
-        height, width, channel = img.shape
+        height = img.shape[0]
+        width = img.shape[1]
         h_ratio = target_height / height
         w_ratio = target_width / width
         img = cv2.resize(img, (target_width, target_height), interpolation=cv2.INTER_AREA)

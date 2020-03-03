@@ -7,9 +7,9 @@ import  os,random,shutil
 from os import walk
 import glob
 
-train_percent = 0.18 # 训练集的比例
-root_path = r'\\192.168.1.251\1项目-2细胞\0血液细胞项目\图片汇总\新样机采集图片\3-已审核图片\1-临时训练汇总数据\1112_冯石佳整理_40倍_100倍_可用训练数据汇总_单核_淋巴已复审\1112_冯石佳整理_40倍_100倍_可用训练数据汇总\x40/'
-train_path = r'\\192.168.1.251\1项目-2细胞\0血液细胞项目\图片汇总\新样机采集图片\3-已审核图片\1-临时训练汇总数据\1112_冯石佳整理_40倍_100倍_可用训练数据汇总_单核_淋巴已复审\1112_冯石佳整理_40倍_100倍_可用训练数据汇总\x401/'
+train_percent = 0.9 # 训练集的比例
+root_path = r'E:\ocr\单字符识别\dataset'
+train_path = r'E:\ocr\单字符识别\test_set'
 if __name__ == '__main__':
     for (_,dirnames,_)in walk(root_path):
         for dirname in dirnames:

@@ -10,7 +10,7 @@ from lxml.etree import Element, SubElement, tostring
 import collections
 
 
-root_path = r'E:\细胞\x100\5类_tdf_seg'
+root_path = r'E:\ocr\dataset'
 
 def gen_xml_from_predict(root_path):
     for(root_path, dirnames, _)in walk(root_path):
@@ -91,7 +91,7 @@ def gen_xml_from_predict(root_path):
                                 node_name = SubElement(node_object, 'name')
                                 # node_name.text = dirname.split('.', 1)[0]
                                 # node_name.text = str(cls)
-                                node_name.text = 'cell'
+                                node_name.text = '1'
 
                                 node_pose = SubElement(node_object, 'pose')
                                 node_pose.text = 'Unspecified'
