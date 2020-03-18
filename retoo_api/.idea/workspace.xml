@@ -2,35 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a1f6c76-c421-448c-8f7b-d0eac6b9d23d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/python code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../classification/dir_rename.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../classification/lenet_trainlist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/retoo_api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auxiliary_labeling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detect_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frozen_inference_graph.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/segmentation_assist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yolo_voc2012.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../torch_code/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../widerperson2xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1to3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1to3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../torch_code/OcrDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../torch_code/linear_regression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../torch_code/logistic_regression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../torch_code/voc2torch_dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Add_to_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Add_to_name.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Batch_file_move.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Batch_file_move.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Divide_train_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Divide_train_and_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Semantic segmentation/cls_to_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Semantic segmentation/cls_to_xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Semantic segmentation/gen_cls_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Semantic segmentation/gen_cls_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XmlProcess/xml_pic_resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XmlProcess/xml_pic_resize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jiaoben1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../jiaoben1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jiaoben3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../jiaoben3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segmentation_assist.py" beforeDir="false" afterPath="$PROJECT_DIR$/segmentation_assist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../torch_code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../torch_code/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../write_name_to_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../write_name_to_txt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,23 +25,25 @@
     <SUITE FILE_PATH="coverage/retoo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1581989397543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/retoo_api$labelImg.coverage" NAME="labelImg Coverage Results" MODIFIED="1582189873430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/labelImg-master" />
     <SUITE FILE_PATH="coverage/retoo_api$Auxiliary_labeling.coverage" NAME="Auxiliary_labeling Coverage Results" MODIFIED="1582535413134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/retoo_api$segmentation_assist.coverage" NAME="segmentation_assist Coverage Results" MODIFIED="1583219053985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/retoo_api$segmentation_assist.coverage" NAME="segmentation_assist Coverage Results" MODIFIED="1583738984780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/retoo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1582857721299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/HZ$D.594.3300/HZ$D.594.3301/pytorch-tutorial-master/tutorials/01-basics/linear_regression" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1484478817">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -74,12 +58,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6749" />
+          <entry key="py" value="7968" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6749" />
+          <entry key="Python" value="7968" />
         </counts>
       </usages-collector>
     </session>
@@ -89,14 +73,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/segmentation_assist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="395" column="78" selection-start-line="395" selection-start-column="78" selection-end-line="395" selection-end-column="78" />
+            <state relative-caret-position="223">
+              <caret line="176" column="50" selection-start-line="176" selection-start-column="50" selection-end-line="176" selection-end-column="50" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1583219034970" expanded="true" signature="314:319" ph="..." />
-                <marker date="1583219034970" expanded="true" signature="12428:15769" ph="..." />
-                <marker date="1583219034970" expanded="true" signature="14461:15769" ph="..." />
-                <marker date="1583219034970" expanded="true" signature="14511:15769" ph="..." />
+                <marker date="1583738984731" expanded="true" signature="324:329" ph="..." />
+                <marker date="1583738984731" expanded="true" signature="15553:18894" ph="..." />
+                <marker date="1583738984731" expanded="true" signature="17586:18894" ph="..." />
+                <marker date="1583738984731" expanded="true" signature="17636:18894" ph="..." />
               </folding>
             </state>
           </provider>
@@ -167,6 +151,8 @@
       <find>en</find>
       <find>detect</find>
       <find>ymin:ymax</find>
+      <find>name</find>
+      <find>'name'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,7 +198,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -383,13 +369,13 @@
     <frame x="953" y="0" width="974" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11925602" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1214442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32620922" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39145106" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3903262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -507,22 +493,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
-          <line>136</line>
+          <line>213</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
-          <line>375</line>
+          <line>453</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
-          <line>384</line>
+          <line>462</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -532,8 +518,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="51" />
+          <line>115</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/segmentation_assist.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -555,6 +551,31 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>os.path.join(save_path, (os.path.basename(xml_path)[:-4] + '_' + str(i) + '_crop.jpg'))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.basename(xml_path)[:-4] + '_' + str(i) + '_crop.jpg')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>save_path, os.path.basename(xml_path)[:-4] + '_' + str(i) + '_crop.jpg'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.join(save_path,dir[-3],dir[-2],dir[-1])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>1.1*rotated_rect[1][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>os.path.join(dir_path,str(index))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -571,31 +592,6 @@
       </expression>
       <expression>
         <expression-string>xml_path[:-4]+'.png'</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.basename(xml_path)[:-4]+'.png'</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(TPs)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>box</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.join(os.path.dirname(xml_path), Cls_Pic_name)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.dirname(xml_path)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -650,14 +646,14 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.594.3300/HZ$D.594.3301/pytorch-tutorial-master/tutorials/01-basics/linear_regression/main.py" />
     <entry file="file://$PROJECT_DIR$/segmentation_assist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="395" column="78" selection-start-line="395" selection-start-column="78" selection-end-line="395" selection-end-column="78" />
+        <state relative-caret-position="223">
+          <caret line="176" column="50" selection-start-line="176" selection-start-column="50" selection-end-line="176" selection-end-column="50" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1583219034970" expanded="true" signature="314:319" ph="..." />
-            <marker date="1583219034970" expanded="true" signature="12428:15769" ph="..." />
-            <marker date="1583219034970" expanded="true" signature="14461:15769" ph="..." />
-            <marker date="1583219034970" expanded="true" signature="14511:15769" ph="..." />
+            <marker date="1583738984731" expanded="true" signature="324:329" ph="..." />
+            <marker date="1583738984731" expanded="true" signature="15553:18894" ph="..." />
+            <marker date="1583738984731" expanded="true" signature="17586:18894" ph="..." />
+            <marker date="1583738984731" expanded="true" signature="17636:18894" ph="..." />
           </folding>
         </state>
       </provider>

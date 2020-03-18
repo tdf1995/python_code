@@ -9,6 +9,7 @@ import glob
 import xml.etree.ElementTree as ET
 from lxml.etree import Element, SubElement, tostring
 from xml.dom.minidom import parseString
+import re
 
 def segXml2segPic(xml_path, mode='semantic',save_path=None):
     '''
@@ -42,7 +43,9 @@ def segXml2segPic(xml_path, mode='semantic',save_path=None):
             cv2.fillPoly(Cls_Pic, [ps], 255)
         Cls_Pic_name = filename[:-4]+'.png'
         if save_path:
-            cv2.imencode('.png',Cls_Pic)[1].tofile(xml_path[:-4]+'.png')
+            if not os.path.exists(save_path):
+                os.mkdir(save_path)
+            cv2.imencode('.jpg',Cls_Pic)[1].tofile(os.path.join(save_path,os.path.basename(xml_path)[:-4]+'.png'))
         else:
             cv2.imencode('.png', Cls_Pic)[1].tofile(xml_path[:-4]+'.png')
     elif mode=='instance':
@@ -88,14 +91,22 @@ def segXml2cropPic(xml_path, mode='semantic',save_path=None):
         for i in range(point_num):
             if points_x[i] == '':
                 continue
-            elif float(points_x[i]) > width:
-                points_x[i] = width
-            if float(points_y[i]) > height:
-                points_y[i] = height
+            # elif float(points_x[i]) > width:
+            #     points_x[i] = width
+            # if float(points_y[i]) > height:
+            #     points_y[i] = height
             ps[i] = (int(float(points_x[i])), int(float(points_y[i])))
         rotated_rect = cv2.minAreaRect(ps)
-        rect_max = int(rotated_rect[1][0]) if rotated_rect[1][0] > rotated_rect[1][1] else int(rotated_rect[1][1])
-        rect_min = int(rotated_rect[1][1]) if rotated_rect[1][0] > rotated_rect[1][1] else int(rotated_rect[1][0])
+        # rotated_rect[1][0] = 1.1*rotated_rect[1][0]
+        # rotated_rect[1][1] = 1.1*rotated_rect[1][1]
+        rect_max = int(1.1*rotated_rect[1][0]) if rotated_rect[1][0] > rotated_rect[1][1] else int(1.1*rotated_rect[1][1])
+        rect_min = int(1.1*rotated_rect[1][1]) if rotated_rect[1][0] > rotated_rect[1][1] else int(1.1*rotated_rect[1][0])
+        if rect_max/2+int(rotated_rect[0][0])>width:
+            rect_max = (width - int(rotated_rect[0][0]))*2
+        # if rect_max / 2 + int(rotated_rect[0][0]) > width:
+
+        # if rect_min<min(height,width):
+        #     rect_min = min(height, width)
 
         angle = rotated_rect[2] if abs(rotated_rect[2]) < 45 else (rotated_rect[2] + 90)
         M = cv2.getRotationMatrix2D((int(rotated_rect[0][0]), int(rotated_rect[0][1])), angle, 1)
@@ -103,9 +114,75 @@ def segXml2cropPic(xml_path, mode='semantic',save_path=None):
         rotated_img = cv2.getRectSubPix(rotated_img, (rect_max, rect_min),
                                         (int(rotated_rect[0][0]), int(rotated_rect[0][1])))
         if save_path:
-            cv2.imencode('.jpg',rotated_img)[1].tofile(xml_path[:-4]+'_crop.jpg')
+            if not os.path.exists(save_path):
+                os.mkdir(save_path)
+            cv2.imencode('.jpg',rotated_img)[1].tofile(os.path.join(save_path,os.path.basename(xml_path)[:-4]+'_crop.jpg'))
         else:
             cv2.imencode('.jpg', rotated_img)[1].tofile(xml_path[:-4]+'_crop.jpg')
+
+def bboxXml2cropPic(xml_path,save_path,label_path=None):
+    '''
+    根据多边形标注裁剪最小外接矩形区域
+    :param xml_path:xml路径
+    :param mode:选择'semantic'，'instance'
+    :param save_path:图像保存的文件夹路径
+    :param label_path:label对应dict的txt路径
+    :return:
+    '''
+    # print(xml_path)
+    tree = ET.parse(xml_path)
+    objs = tree.findall('object')
+    if not os.path.exists(xml_path[:-4]+'.jpg'):
+        return 0
+    image = cv2.imdecode(np.fromfile(xml_path[:-4]+'.jpg',dtype=np.uint8),-1)
+    height, width = image.shape
+    # filename = tree.find('filename').text
+    # Cls_Pic = np.zeros([height, width], dtype=np.uint8)
+    if not label_path:
+        for i, obj in enumerate(objs):
+            xmin = int(obj.find('bndbox').find('xmin').text)
+            ymin = int(obj.find('bndbox').find('ymin').text)
+            xmax = int(obj.find('bndbox').find('xmax').text)
+            ymax = int(obj.find('bndbox').find('ymax').text)
+            crop_img = image[ymin:ymax, xmin:xmax]
+            if not os.path.exists(save_path):
+                os.makedirs(save_path)
+            print(os.path.join(save_path, (os.path.basename(xml_path)[:-4] + '_' + str(i) + '_crop.jpg')))
+            try:
+                cv2.imencode('.jpg', crop_img)[1].tofile(
+                    os.path.join(save_path, (os.path.basename(xml_path)[:-4] + '_' + str(i) + '_crop.jpg')))
+            except:
+                continue
+    else:
+        f = open(label_path,'r')
+        lines = f.readlines()
+        b={}
+        for i,line in enumerate(lines):
+            a = re.split('[::\n]',line)
+            if len(a)>3:
+                b[':'] = a[2]
+            if a[0]=='':
+                continue
+            b[a[0]] = a[1]
+
+        for i,obj in enumerate(objs):
+            label = obj.find('name').text
+            if label in b:
+                label = b[label]
+            print(label)
+            xmin = int(obj.find('bndbox').find('xmin').text)
+            ymin =int(obj.find('bndbox').find('ymin').text)
+            xmax = int(obj.find('bndbox').find('xmax').text)
+            ymax = int(obj.find('bndbox').find('ymax').text)
+            crop_img = image[ymin:ymax, xmin:xmax]
+
+            sub_dir = os.path.join(save_path, label)
+            if not os.path.exists(sub_dir):
+                os.mkdir(sub_dir)
+            try:
+                cv2.imencode('.jpg',crop_img)[1].tofile(os.path.join(sub_dir,os.path.basename(xml_path)[:-4]+'_'+str(i)+'_crop.jpg'))
+            except:
+                continue
 
 def bboxXml2segPic(xml_path,save_path=None):
     '''
@@ -140,6 +217,7 @@ def bboxXml2segPic(xml_path,save_path=None):
         # cv2.waitKey(0)
     Cls_Pic_name = filename[:-4]+'.png'
     if save_path:
+
         cv2.imencode('.png',Cls_Pic)[1].tofile(os.path.join(save_path, Cls_Pic_name))
     else:
         cv2.imencode('.png', Cls_Pic)[1].tofile(os.path.join(os.path.dirname(xml_path), Cls_Pic_name))
@@ -393,7 +471,11 @@ def segMask_Crop(image, mask, area_thresh=3500):
         return  rotated_img,rotated_rect
 
 if __name__=="__main__":
-    path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\检测ROI图片数据集\邦纳提供图片_roi'
+    path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\字符区图片数据集\邦纳提供图片_字符区图_单字符矩形标注'
+    save_path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\字符区图片数据集\邦纳提供图片_字符区图_单字符矩形标注_crop'
+    # label_path = r'D:\python code\ocr_dict.txt'
     xml_files = glob.glob(path+'\*\*.xml')
     for xml_file in xml_files:
-        segXml2cropPic(xml_file)
+        dir = xml_file.split('\\')
+        Save_path = os.path.join(save_path,dir[-3],dir[-2])
+        bboxXml2cropPic(xml_file,Save_path)

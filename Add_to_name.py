@@ -3,7 +3,7 @@ import os
 from os import walk
 from tqdm import tqdm
 
-root_path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\检测ROI图片数据集\roi_create_3'
+root_path = r'D:\python code\torch_code\dataset'
 
 def Add_to_name(root_path):
     rootdir = os.listdir(root_path)

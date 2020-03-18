@@ -7,7 +7,7 @@ import  os,random,shutil
 from os import walk
 import glob
 
-train_percent = 0.9 # 训练集的比例
+train_percent = 0.1 # 训练集的比例
 root_path = r'E:\ocr\单字符识别\dataset'
 train_path = r'E:\ocr\单字符识别\test_set'
 if __name__ == '__main__':

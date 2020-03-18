@@ -6,9 +6,9 @@ import shutil
 from numba import jit
 
 
-root_path = r'C:\Users\tdf\Desktop\条烟分割库_2019_0304_3_删除小目标标注\条烟分割库_2019_0304_3_删除小目标标注'
-target_path = r'E:\条烟\分割\数据\xml'
-suffix = '.xml'
+root_path = r'D:\python code\torch_code\dataset'
+target_path = r'D:\python code\torch_code\images'
+suffix = '.jpg'
 mode = 0#0为复制1为剪切
 
 @jit
