@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a1f6c76-c421-448c-8f7b-d0eac6b9d23d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../torch_code/OcrDataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../torch_code/linear_regression.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../torch_code/logistic_regression.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../torch_code/voc2torch_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Add_to_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Add_to_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Batch_file_move.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Batch_file_move.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Divide_train_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Divide_train_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/retoo_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/retoo_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segmentation_assist.py" beforeDir="false" afterPath="$PROJECT_DIR$/segmentation_assist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../torch_code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../torch_code/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../write_name_to_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../write_name_to_txt.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,116 +17,6 @@
     <SUITE FILE_PATH="coverage/retoo_api$Auxiliary_labeling.coverage" NAME="Auxiliary_labeling Coverage Results" MODIFIED="1582535413134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/retoo_api$segmentation_assist.coverage" NAME="segmentation_assist Coverage Results" MODIFIED="1583738984780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/retoo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1582857721299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/HZ$D.594.3300/HZ$D.594.3301/pytorch-tutorial-master/tutorials/01-basics/linear_regression" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1484478817">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="17" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="17" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="7968" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="7968" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/segmentation_assist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="176" column="50" selection-start-line="176" selection-start-column="50" selection-end-line="176" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1583738984731" expanded="true" signature="324:329" ph="..." />
-                <marker date="1583738984731" expanded="true" signature="15553:18894" ph="..." />
-                <marker date="1583738984731" expanded="true" signature="17586:18894" ph="..." />
-                <marker date="1583738984731" expanded="true" signature="17636:18894" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auxiliary_labeling.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detect_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6200">
-              <caret line="252" column="24" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
-              <folding>
-                <element signature="e#132#141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/labelImg-master/labelImg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/标注/labelImgRect-1.8.0/labelImg.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,51 +38,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$USER_HOME$/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py" />
-        <option value="$PROJECT_DIR$/detect_test.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Auxiliary_labeling.py" />
-        <option value="$PROJECT_DIR$/segmentation_assist.py" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-  </component>
+  <component name="ProjectId" id="1aFZTNFGk5XRhvnlEZOrWyW4NMg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="retoo_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="retoo_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/ocr/unet-128/unet-128" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -211,18 +62,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\python code\retoo_api" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.segmentation_assist">
     <configuration name="Auxiliary_labeling" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -363,40 +202,36 @@
       <option name="presentableId" value="Default" />
       <updated>1580710748150</updated>
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1586333352414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586333352414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="1" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1214442" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32620922" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3903262" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32954547" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.62253827" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="611" y="117" key="CommitChangelistDialog2" timestamp="1586333351781">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="611" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586333351781" />
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1586333373425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586333373425" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1586333318057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586333318057" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,107 +431,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/xml/etree/ElementTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39575">
-          <caret line="1641" column="15" selection-start-line="1641" selection-start-column="12" selection-end-line="1641" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/669620383/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43932">
-          <caret line="9523" column="6" lean-forward="true" selection-start-line="9523" selection-start-column="6" selection-end-line="9523" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2900">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras_preprocessing/image/iterator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="209" column="13" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸡腿70g1_Image_20191223150905783_roi_5.png" />
-    <entry file="file://$PROJECT_DIR$/鸡腿70g1_Image_20191223150905783_roi_6.png" />
-    <entry file="file://$PROJECT_DIR$/鸡腿70g1_Image_20191223150905783_roi_7.png" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.594.3300/HZ$D.594.3301/pytorch-tutorial-master/tutorials/01-basics/linear_regression/main.py" />
-    <entry file="file://$PROJECT_DIR$/segmentation_assist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="176" column="50" selection-start-line="176" selection-start-column="50" selection-end-line="176" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1583738984731" expanded="true" signature="324:329" ph="..." />
-            <marker date="1583738984731" expanded="true" signature="15553:18894" ph="..." />
-            <marker date="1583738984731" expanded="true" signature="17586:18894" ph="..." />
-            <marker date="1583738984731" expanded="true" signature="17636:18894" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auxiliary_labeling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detect_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6200">
-          <caret line="252" column="24" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
-          <folding>
-            <element signature="e#132#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/labelImg-master/labelImg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/标注/labelImgRect-1.8.0/labelImg.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
   </component>
 </project>
