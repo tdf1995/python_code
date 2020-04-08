@@ -4,7 +4,7 @@ import torchvision
 import torchvision.transforms as transforms
 
 #
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda')
 
 input_size = 784
 hidden_size = 500
@@ -65,6 +65,7 @@ for epoch in range(num_epochs):
         optimizer.step()
         if (i+1)%100 == 0:
             print('Epoch [{}/{}], Step[{}/{}], Loss: {:.4f}'.format(epoch+1,num_epochs,i+1,total_step,loss.item()))
+
 
 #   test the model
 with torch.no_grad():

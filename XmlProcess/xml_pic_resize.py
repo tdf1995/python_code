@@ -5,10 +5,10 @@ import glob
 import xml.etree.ElementTree as ET
 import numpy as np
 
-xml_path = r'E:\ocr\检测\原图mask分割后的单个字符检测\VOC2007\Annotations'
-pic_path = r'E:\ocr\检测\原图mask分割后的单个字符检测\VOC2007\JPEGImages'
-target_height = 128
-target_width = 1200
+xml_path = r'E:\project\pedestrian\行人的图片1\行人的图片1 - 副本'
+pic_path = r'E:\project\pedestrian\行人的图片1\行人的图片1 - 副本'
+target_height = 300
+target_width = 500
 
 def xml_pic_Resize(xml_path, pic_path):
     xml_files = glob.glob(xml_path+'/*.xml')

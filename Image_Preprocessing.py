@@ -3,8 +3,8 @@ import numpy as np
 '''
 'Resize','Resize_And_Padding','random_crop','bmp_to_jpg'
 '''
-preprocessing_name = 'Resize'
-root_path = r'E:\ocr\dataset\png'
+preprocessing_name = 'bmp_to_jpg'
+root_path = r'E:\project\water\dataset\JPEGImages'
 output_height = 150
 output_width = 375
 if __name__ =='__main__':

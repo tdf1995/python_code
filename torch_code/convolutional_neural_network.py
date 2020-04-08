@@ -2,10 +2,10 @@ import torch
 import torch.nn as nn
 import torchvision
 import torchvision.transforms as transforms
-
+import torchvision.models as models
 # Device configuration
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
+# device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device ="cpu:0"
 # Hyper parameters
 num_epochs = 5
 num_classes = 10
@@ -57,6 +57,7 @@ class ConvNet(nn.Module):
 
 
 model = ConvNet(num_classes).to(device)
+# model = models.resnet18(pretrained=False,num_classes=10).to(device)
 model.train()
 # nn.init.kaiming_normal(model.weight)
 # Loss and optimizer
@@ -67,6 +68,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 total_step = len(train_loader)
 for epoch in range(num_epochs):
     for i, (images, labels) in enumerate(train_loader):
+        # images = torch.cat([images,images,images],dim=1)
         images = images.to(device)
         labels = labels.to(device)
 
@@ -80,7 +82,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-        if (i + 1) % 100 == 0:
+        if (i + 1) % 1 == 0:
             print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
                   .format(epoch + 1, num_epochs, i + 1, total_step, loss.item()))
 
