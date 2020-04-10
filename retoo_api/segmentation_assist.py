@@ -135,7 +135,7 @@ def bboxXml2cropPic(xml_path,save_path,label_path=None):
     if not os.path.exists(xml_path[:-4]+'.jpg'):
         return 0
     image = cv2.imdecode(np.fromfile(xml_path[:-4]+'.jpg',dtype=np.uint8),-1)
-    height, width = image.shape
+    # height, width = image.shape
     # filename = tree.find('filename').text
     # Cls_Pic = np.zeros([height, width], dtype=np.uint8)
     if not label_path:
@@ -471,8 +471,8 @@ def segMask_Crop(image, mask, area_thresh=3500):
         return  rotated_img,rotated_rect
 
 if __name__=="__main__":
-    path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\字符区图片数据集\邦纳提供图片_字符区图_单字符矩形标注'
-    save_path = r'\\192.168.1.251\ssd-研发部\项目工作目录\OCR项目\拍摄的数据集\字符区图片数据集\邦纳提供图片_字符区图_单字符矩形标注_crop'
+    path = r'\\192.168.1.251\ssd-研发部\generate_annotation_path'
+    save_path = r'\\192.168.1.251\ssd-研发部\crop'
     # label_path = r'D:\python code\ocr_dict.txt'
     xml_files = glob.glob(path+'\*\*.xml')
     for xml_file in xml_files:

@@ -91,3 +91,36 @@ def draw_boxes_in_pic(img,boxes,scores,classes,draw_scores=True,draw_classes=Tru
 
     return img
 
+def crop_imgs_in_pic(image, boxes):
+    height = image.shape[0]
+    width = image.shape[1]
+    crop_imgs = []
+    if boxes.max() > 1:
+        for i, box in enumerate(boxes):
+            (ymin, xmin, ymax, xmax) = (
+                int(box[0]), int(box[1]), int(box[2]), int(box[3]))
+            if ymin < 0:
+                ymin = 0
+            if xmin < 0:
+                xmin = 0
+            if ymax > height:
+                ymax = height
+            if xmax > width:
+                xmax = width
+
+            crop_imgs.append(image[ymin:ymax,xmin:xmax])
+    else:
+        for i, box in enumerate(boxes):
+            (ymin, xmin, ymax, xmax) = (
+                int(box[0] * height), int(box[1] * width), int(box[2] * height), int(box[3] * width))
+            if ymin < 0:
+                ymin = 0
+            if xmin < 0:
+                xmin = 0
+            if ymax > height:
+                ymax = height
+            if xmax > width:
+                xmax = width
+
+            crop_imgs.append(image[ymin:ymax, xmin:xmax])
+    return crop_imgs
