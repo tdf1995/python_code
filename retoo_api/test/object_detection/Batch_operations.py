@@ -6,7 +6,7 @@ import numpy as np
 from detect_faster_rcnn import detector_faster_rcnn
 from detect_yolo import detector_yolo
 from detection_assist import *
-import xml.etree.ElementTree as ET
+
 
 def batch_draw_boxes(od,img_root_path,target_path=None):
     '''

@@ -60,7 +60,14 @@ if __name__ == '__main__':
     width = image.shape[1]
     seg.inference_detection_model(image)
     result = seg.results_analysis()
+
+    mask_to_show = simple_show_mask(result)
+
+    drawed_img = draw_mask_in_img(image,result)
+
     crop = crop_imgs(image,result)
     crop[0] = cv2.resize(crop[0],(600,400),cv2.INTER_NEAREST)
     cv2.imshow('1',crop[0])
+    cv2.imshow('2', mask_to_show)
+    cv2.imshow('3', drawed_img)
     cv2.waitKey(0)

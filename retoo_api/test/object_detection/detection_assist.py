@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-
+import xml.etree.ElementTree as ET
 
 def iou(dt, gt):# dt:检测框，gt:目标框
     S_rec_gt = (gt[2] - gt[0]) * (gt[3] - gt[1]) # 标注框的面积
@@ -76,6 +76,16 @@ def od_boxes_recall(boxes,xml_path,height,width,recall_thresh=0.3):
     return gt_boxes,boxes,tp_boxes
 
 def draw_boxes_in_pic(img,boxes,scores,classes,draw_scores=True,draw_classes=True):
+    '''
+    在原图上画框
+    :param img:原图
+    :param boxes: 框
+    :param scores: 分数
+    :param classes: 类别
+    :param draw_scores: 是否画分数
+    :param draw_classes: 是否画类别
+    :return: 画好的图
+    '''
     colors = [(0, 0, 255), (0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 0, 255), (255, 255, 0)]
     height = img.shape[0]
     width = img.shape[1]
@@ -123,6 +133,12 @@ def draw_boxes_in_pic(img,boxes,scores,classes,draw_scores=True,draw_classes=Tru
         return img
 
 def crop_imgs_in_pic(image, boxes):
+    '''
+    在原图上根据框隔小图
+    :param image: 原图
+    :param boxes: 框
+    :return: 小图
+    '''
     height = image.shape[0]
     width = image.shape[1]
     crop_imgs = []

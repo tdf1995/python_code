@@ -3,6 +3,7 @@ import tensorflow as tf
 import cv2
 import numpy as np
 
+
 class Detection():
     def __init__(self,model_path,output_node=[],input_node='',preFunc=None, nms_thresh=None, score_thresh=None,analysisFunc=None):
         self.sess = self.model_Init(model_path)

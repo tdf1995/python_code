@@ -56,8 +56,7 @@ if __name__ == '__main__':
     img_path = r'E:\多目标跟踪\检测训练挑选\00000026.jpg'
     clf = Classification(pb_path)
     image = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), -1)
-    height = image.shape[0]
-    width = image.shape[1]
+
     clf.inference_detection_model(image)
     result = clf.results_analysis()
 

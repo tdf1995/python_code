@@ -9,6 +9,13 @@ from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 
 def confusion_matrix_process(truth_labels,predict_labels,labels_list=None):
+    '''
+    混淆矩阵
+    :param truth_labels: 真实类别
+    :param predict_labels: 预测类别
+    :param labels_list: 类别列表
+    :return:
+    '''
     if labels_list:
         for i in range(len(truth_labels)):
             truth_labels[i]=labels_list[int(truth_labels[i])]

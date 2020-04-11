@@ -3,11 +3,25 @@ import numpy as np
 import xml.etree.ElementTree as ET
 
 def simple_show_mask(mask):
+    '''
+    简单显示mask
+    :param mask:
+    :return:
+    '''
     _, mask_binary = cv2.threshold(mask, 0, 255, cv2.THRESH_BINARY)
     return mask_binary
 
 def draw_mask_in_img(image, mask, draw_boundingRect=True,
                 draw_minAreaRect=True,draw_contour=True):
+    '''
+    在原图上画mask的各种图形
+    :param image: 原图
+    :param mask: 预测图
+    :param draw_boundingRect: 是否画bbox
+    :param draw_minAreaRect: 是否画最小外接矩形
+    :param draw_contour: 是否画轮廓
+    :return: 画好的图
+    '''
     height = image.shape[0]
     width = image.shape[1]
     mask = cv2.resize(mask, (width,height),cv2.INTER_NEAREST)
@@ -30,6 +44,12 @@ def draw_mask_in_img(image, mask, draw_boundingRect=True,
     return image
 
 def crop_imgs(image, mask):
+    '''
+    根据预测，将原图像中的分割物体割出来
+    :param image: 原图
+    :param mask: 预测图
+    :return: 分割后的小图
+    '''
     height = image.shape[0]
     width = image.shape[1]
     mask = cv2.resize(mask, (width, height), cv2.INTER_NEAREST)
@@ -51,6 +71,14 @@ def crop_imgs(image, mask):
     return rotated_img
 
 def seg_map_iou(image, mask, xml_path=None, png_path=None):
+    '''
+    单张图像分割效果评估，标注IOU
+    :param image: 图像
+    :param mask: 预测的mask
+    :param xml_path: xml标注路径
+    :param png_path: png标注路径
+    :return:
+    '''
     img_h = image.shape[0]
     img_w = image.shape[1]
     mask_h = mask.shape[0]
@@ -77,8 +105,10 @@ def seg_map_iou(image, mask, xml_path=None, png_path=None):
                 ps[i] = (int(float(points_x[i])), int(float(points_y[i])))
             cv2.polylines(truth_mask, [ps], 1, 0, 1)  # img:图像,顶点集，是否闭合，颜色，线宽度
             cv2.fillPoly(truth_mask, [ps], 255)
-    if png_path:
+    elif png_path:
         truth_mask = cv2.imdecode(np.fromfile(png_path,dtype=np.uint8),-1)
+    else:
+        print('没有标注')
     Union_mask = cv2.bitwise_or(truth_mask, seg_mask)
     Union_contours, hierarchy = cv2.findContours(Union_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     Union_area = 0
@@ -92,14 +122,5 @@ def seg_map_iou(image, mask, xml_path=None, png_path=None):
     if len(Intersection_contours) > 0:
         for i in range(len(Intersection_contours)):
             Intersection_area += cv2.contourArea(Intersection_contours[i])
-    # Union_mask = cv2.resize(Union_mask, (600, 400))
-    # Intersection_mask = cv2.resize(Intersection_mask, (600, 400))
-    # seg_mask = cv2.resize(seg_mask,(600,400))
-    # truth_mask = cv2.resize(truth_mask, (600, 400))
-    # cv2.imshow('0', Union_mask)
-    # cv2.imshow('1', Intersection_mask)
-    # cv2.imshow('2',seg_mask)
-    # cv2.imshow('3',truth_mask)
-    # cv2.waitKey(0)
-    # print(float(Intersection_area)/Union_area)
+
     return float(Intersection_area)/Union_area
