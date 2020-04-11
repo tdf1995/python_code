@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from Detection import Detection
-from detection_assist import draw_boxes_in_pic,nms,scores_filter
+from detection_assist import *
 
 class detector_yolo(Detection):
     def __init__(self,model_path,output_node=['lambda_1/concat_8:0','lambda_1/concat_9:0','lambda_1/concat_10:0'],input_node='input_1:0'

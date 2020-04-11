@@ -2,7 +2,7 @@
 import tensorflow as tf
 import cv2
 import numpy as np
-from segmentation.segmention_assist import *
+from segmentation.segmentation_assist import *
 
 class Segmentation():
     def __init__(self, model_path,output_node='SemanticPredictions:0',input_node='ImageTensor:0',preFunc=None):
@@ -10,6 +10,8 @@ class Segmentation():
         self.output_node = output_node
         self.input_node = input_node
         self.preFunc = preFunc
+        if self.preFunc == None:
+            print('采用默认预处理操作：RGB通道+除255再转(-1,1)+拓展维度，如需特殊预处理请在实例化时传入！')
 
     def model_Init(self, model_path):
         tf.logging.set_verbosity(tf.logging.ERROR)
@@ -26,7 +28,7 @@ class Segmentation():
 
     def preprocess(self, image):
         if self.preFunc == None:
-            print('采用默认预处理操作：RGB通道+除255再转(-1,1)+拓展维度，如需特殊预处理请在实例化时传入！')
+            # print('采用默认预处理操作：RGB通道+除255再转(-1,1)+拓展维度，如需特殊预处理请在实例化时传入！')
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             image = np.expand_dims(image, axis=0)
         else:
